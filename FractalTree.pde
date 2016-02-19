@@ -1,14 +1,15 @@
-
-private double fractionLength = .8; 
+private double fractionLength; 
 private int smallestBranch = 10; 
-private double branchAngle = .8;  
+private double branchAngle ;  
 public void setup() 
 {   
   size(640,480);    
-  noLoop(); 
+  
 } 
 public void draw() 
 {   
+  fractionLength = 1 - (mouseY *.0018)- .18 ;
+  branchAngle = 1 - (mouseX * .002) ;
   background(0);   
   stroke(0,255,0);   
   line(320,480,320,380);   
